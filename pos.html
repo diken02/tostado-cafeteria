@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>POS / Productos · Tostado</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-title="POS / Productos">
+<main id="app">
+<div class="page-head"><div><h1>Punto de venta</h1><p>Mesa 3 · Pedido #1044</p></div></div>
+<div class="grid" style="grid-template-columns:2fr 1fr">
+<div><div class="filters"><input type="search" placeholder="Buscar producto..."><select><option>Todos</option><option>Bebidas calientes</option><option>Bebidas frías</option><option>Postres</option></select></div>
+<div class="grid cols-3">
+<div class="card product"><div class="img">☕</div><strong>Espresso</strong><div class="price">$3.00</div><button class="btn sm">Agregar</button></div>
+<div class="card product"><div class="img">☕</div><strong>Capuchino</strong><div class="price">$4.50</div><button class="btn sm">Agregar</button></div>
+<div class="card product"><div class="img">🥛</div><strong>Latte</strong><div class="price">$4.80</div><button class="btn sm">Agregar</button></div>
+<div class="card product"><div class="img">🥤</div><strong>Café frío</strong><div class="price">$5.00</div><button class="btn sm">Agregar</button></div>
+<div class="card product"><div class="img">🥐</div><strong>Croissant</strong><div class="price">$3.50</div><button class="btn sm">Agregar</button></div>
+<div class="card product"><div class="img">🍰</div><strong>Cheesecake</strong><div class="price">$5.50</div><button class="btn sm">Agregar</button></div>
+</div></div>
+<aside class="card"><h3>Orden actual</h3>
+<ul class="list"><li><span>2 × Capuchino</span><span>$9.00</span></li><li><span>1 × Croissant</span><span>$3.50</span></li><li><span>1 × Cheesecake</span><span>$5.50</span></li></ul>
+<ul class="list"><li><span>Subtotal</span><span>$18.00</span></li><li><span>Impuesto (16%)</span><span>$2.88</span></li><li><strong>Total</strong><strong>$20.88</strong></li></ul>
+<div class="form-row" style="margin-top:1rem"><label>Método de pago</label><select><option>Efectivo</option><option>Tarjeta</option></select></div>
+<button class="btn block">Cobrar</button><button class="btn secondary block" style="margin-top:.5rem">Cancelar orden</button></aside>
+</div>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
