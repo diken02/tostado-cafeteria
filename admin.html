@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Administración · Tostado</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-title="Administración">
+<main id="app">
+<div class="page-head"><div><h1>Panel de administración</h1><p>Resumen del día · Tostado</p></div><a class="btn" href="pos.html">Nueva venta</a></div>
+<div class="grid cols-4">
+  <div class="card stat"><div class="label">Ventas hoy</div><div class="value">$4,820</div><div class="delta">▲ 12% vs ayer</div></div>
+  <div class="card stat"><div class="label">Pedidos</div><div class="value">143</div><div class="delta">▲ 8%</div></div>
+  <div class="card stat"><div class="label">Mesas ocupadas</div><div class="value">7/12</div><div class="delta down">▼ 2</div></div>
+  <div class="card stat"><div class="label">Ticket promedio</div><div class="value">$33.70</div><div class="delta">▲ 3%</div></div>
+</div>
+<div class="grid cols-2" style="margin-top:1.25rem">
+  <div class="card"><h3>Ventas de la semana</h3><div class="chart-wrap"><div class="chart"><div style="height:50%"><span>Lun</span></div><div style="height:65%"><span>Mar</span></div><div style="height:55%"><span>Mié</span></div><div style="height:80%"><span>Jue</span></div><div style="height:95%"><span>Vie</span></div><div style="height:100%"><span>Sáb</span></div><div style="height:70%"><span>Dom</span></div></div></div></div>
+  <div class="card"><h3>Alertas de inventario</h3><ul class="list"><li>Café en grano Arábica <span class="badge danger">2 kg</span></li><li>Leche entera <span class="badge warn">8 L</span></li><li>Vasos 12oz <span class="badge warn">120 u</span></li><li>Azúcar <span class="badge ok">25 kg</span></li></ul></div>
+</div>
+<div class="card" style="margin-top:1.25rem"><h3>Últimos pedidos</h3><div class="table-wrap"><table><thead><tr><th>#</th><th>Mesa</th><th>Detalle</th><th>Total</th><th>Estado</th></tr></thead><tbody>
+<tr><td>1041</td><td>Mesa 3</td><td>2 Capuchinos, 1 Croissant</td><td>$18.50</td><td><span class="badge ok">Pagado</span></td></tr>
+<tr><td>1042</td><td>Mesa 7</td><td>1 Latte, 1 Cheesecake</td><td>$12.00</td><td><span class="badge warn">En preparación</span></td></tr>
+<tr><td>1043</td><td>Barra</td><td>3 Espressos</td><td>$9.00</td><td><span class="badge info">Servido</span></td></tr>
+</tbody></table></div></div>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>

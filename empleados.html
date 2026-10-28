@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empleados · Tostado</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-title="Empleados">
+<main id="app">
+<div class="page-head"><div><h1>Empleados</h1><p>Equipo de Tostado</p></div><button class="btn">+ Nuevo empleado</button></div>
+<div class="grid cols-2" style="grid-template-columns:2fr 1fr">
+<div class="card"><div class="filters"><input type="search" placeholder="Buscar empleado..."><select><option>Todos los roles</option><option>Administrador</option><option>Barista</option><option>Mesero</option><option>Cajero</option></select></div>
+<div class="table-wrap"><table><thead><tr><th>Nombre</th><th>Rol</th><th>Turno</th><th>Estado</th><th></th></tr></thead><tbody>
+<tr><td>Ana Torres</td><td>Administradora</td><td>Mañana</td><td><span class="badge ok">Activo</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
+<tr><td>Luis Mendoza</td><td>Barista</td><td>Mañana</td><td><span class="badge ok">Activo</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
+<tr><td>Carla Ríos</td><td>Mesera</td><td>Tarde</td><td><span class="badge ok">Activo</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
+<tr><td>Jorge Salas</td><td>Cajero</td><td>Tarde</td><td><span class="badge warn">Vacaciones</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
+<tr><td>Marta Lugo</td><td>Barista</td><td>Noche</td><td><span class="badge danger">Inactivo</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
+</tbody></table></div></div>
+<form class="card"><h3>Nuevo empleado</h3>
+<div class="form-row"><label>Nombre completo</label><input placeholder="Nombre y apellido"></div>
+<div class="form-row"><label>Correo</label><input type="email" placeholder="correo@tostado.com"></div>
+<div class="form-row"><label>Rol</label><select><option>Barista</option><option>Mesero</option><option>Cajero</option><option>Administrador</option></select></div>
+<div class="form-row"><label>Turno</label><select><option>Mañana</option><option>Tarde</option><option>Noche</option></select></div>
+<button type="button" class="btn block">Guardar</button></form>
+</div>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>

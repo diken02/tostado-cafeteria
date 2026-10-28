@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menú · Tostado</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-title="Menú">
+<main id="app">
+<div class="page-head"><div><h1>Edición del menú</h1><p>Administra productos, precios y disponibilidad</p></div></div>
+<div class="grid cols-2" style="grid-template-columns:2fr 1fr">
+<div class="card"><div class="filters"><input type="search" placeholder="Buscar producto..."><select><option>Todas las categorías</option><option>Bebidas calientes</option><option>Bebidas frías</option><option>Postres</option></select></div>
+<div class="table-wrap"><table><thead><tr><th>Producto</th><th>Categoría</th><th>Precio</th><th>Estado</th><th></th></tr></thead><tbody>
+<tr><td>☕ Espresso</td><td>Bebidas calientes</td><td>$3.00</td><td><span class="badge ok">Activo</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
+<tr><td>☕ Capuchino</td><td>Bebidas calientes</td><td>$4.50</td><td><span class="badge ok">Activo</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
+<tr><td>🥤 Café frío</td><td>Bebidas frías</td><td>$5.00</td><td><span class="badge ok">Activo</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
+<tr><td>🥐 Croissant</td><td>Panadería</td><td>$3.50</td><td><span class="badge ok">Activo</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
+<tr><td>🍰 Cheesecake</td><td>Postres</td><td>$5.50</td><td><span class="badge warn">Pausado</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
+</tbody></table></div></div>
+<form class="card"><h3>Editar producto</h3>
+<div class="form-row"><label>Nombre</label><input value="Capuchino"></div>
+<div class="form-row"><label>Categoría</label><select><option>Bebidas calientes</option><option>Bebidas frías</option><option>Postres</option></select></div>
+<div class="form-row"><label>Precio</label><input value="4.50"></div>
+<div class="form-row"><label>Descripción</label><textarea rows="3">Espresso con leche vaporizada y espuma cremosa.</textarea></div>
+<div class="form-row"><label>Disponibilidad</label><select><option>Activo</option><option>Pausado</option></select></div>
+<button type="button" class="btn block">Guardar cambios</button> <button type="button" class="btn secondary block" style="margin-top:.5rem">Cancelar</button></form>
+</div>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
