@@ -7,13 +7,26 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div class="login-page">
+<header class="navbar">
+  <a class="navbar-brand" href="index.html">☕ Tostado</a>
+  <nav class="navbar-links" aria-label="Navegación principal">
+    <a href="index.html" class="active">Inicio</a>
+    <a href="menu-cliente.html">Menú</a>
+    <a href="mesas.html">Mesas</a>
+    <a href="#carrito">Carrito</a>
+    <a href="#como-pagarlo">Cómo pagarlo</a>
+    <a href="#contacto">Contacto</a>
+    <a class="navbar-cta" href="menu-cliente.html">Menú cliente</a>
+    <a class="navbar-login" href="index.html#login">Iniciar sesión</a>
+  </nav>
+</header>
+<div class="login-page with-navbar">
   <section class="login-hero">
     <h1>☕ Tostado</h1>
     <p>Sistema de gestión para cafetería: inventario, mesas, punto de venta, reportes y equipo en un solo lugar.</p>
   </section>
   <section class="login-form">
-    <form class="card" action="admin.html">
+    <form id="login" class="card" action="admin.html">
       <h2>Bienvenido</h2>
       <p style="color:var(--suave)">Ingresa para continuar (demo visual, sin autenticación).</p>
       <div class="form-row"><label for="u">Correo</label><input id="u" type="email" placeholder="usuario@tostado.com"></div>

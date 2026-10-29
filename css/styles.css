@@ -97,3 +97,20 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--dorado);border-c
   .login-hero{padding:2rem}
   .topbar{padding:.9rem 1rem}
 }
+
+/* Navbar pública */
+.navbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.7rem 1.5rem;background:var(--espresso);color:var(--crema)}
+.navbar-brand{font-family:var(--font-title);font-size:1.5rem;color:var(--dorado);text-decoration:none}
+.navbar-links{display:flex;align-items:center;gap:.3rem;flex-wrap:wrap}
+.navbar-links a{color:var(--crema);text-decoration:none;padding:.4rem .7rem;border-radius:8px}
+.navbar-links a:hover{background:rgba(255,255,255,.1)}
+.navbar-links a.active{color:var(--dorado)}
+.navbar-links a.navbar-cta{background:var(--caramelo);color:#fff;font-weight:600}
+.navbar-links a.navbar-cta:hover{background:var(--dorado)}
+.navbar-links a.navbar-login{border:1px solid var(--dorado);color:var(--dorado)}
+.login-page.with-navbar{min-height:calc(100vh - 60px)}
+.public-main{max-width:1100px;margin:0 auto;padding:1.5rem}
+.menu-cat{margin-bottom:2rem}
+.product .desc{color:var(--suave);margin:0 0 .8rem}
+.product-foot{display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+@media(max-width:768px){.navbar{padding:.6rem 1rem}.navbar-links a{padding:.3rem .5rem;font-size:.9rem}}
