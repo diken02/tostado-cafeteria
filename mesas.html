@@ -8,18 +8,41 @@
 </head>
 <body data-title="Mesas">
 <main id="app">
-<div class="page-head"><div><h1>Mesas</h1><p>Estado del salón (demo)</p></div><div><span class="badge ok">Libre</span> <span class="badge danger">Ocupada</span> <span class="badge warn">Reservada</span></div></div>
-<div class="grid cols-4">
-<div class="card mesa ocupada"><div class="num">1</div><span class="badge danger">Ocupada</span><p>4 personas · $32.50</p></div>
-<div class="card mesa libre"><div class="num">2</div><span class="badge ok">Libre</span><p>2 asientos</p></div>
-<div class="card mesa ocupada"><div class="num">3</div><span class="badge danger">Ocupada</span><p>2 personas · $18.50</p></div>
-<div class="card mesa reservada"><div class="num">4</div><span class="badge warn">Reservada</span><p>19:30 · Familia Ruiz</p></div>
-<div class="card mesa libre"><div class="num">5</div><span class="badge ok">Libre</span><p>4 asientos</p></div>
-<div class="card mesa libre"><div class="num">6</div><span class="badge ok">Libre</span><p>2 asientos</p></div>
-<div class="card mesa ocupada"><div class="num">7</div><span class="badge danger">Ocupada</span><p>2 personas · $12.00</p></div>
-<div class="card mesa reservada"><div class="num">8</div><span class="badge warn">Reservada</span><p>20:00 · M. Pérez</p></div>
-</div>
+<div class="page-head"><div><h1>Mesas</h1><p>Estado del salón (demo, sin guardado)</p></div><div><span class="badge ok">Libre</span> <span class="badge danger">Ocupada</span> <span class="badge warn">Reservada</span></div></div>
+<div class="card" style="margin-bottom:1rem"><div class="filters" style="margin:0;align-items:center">
+<strong>Cantidad de mesas: <span id="total">0</span></strong>
+<button class="btn sm" id="add" type="button">+ Agregar mesa</button>
+<button class="btn secondary sm" id="remove" type="button">− Quitar mesa</button>
+</div></div>
+<div class="grid cols-4" id="mesas"></div>
 </main>
 <script src="js/app.js"></script>
+<script>
+(function(){
+var ESTADOS={Libre:['libre','ok'],Reservada:['reservada','warn'],Ocupada:['ocupada','danger']};
+var mesas=[{c:4,e:'Ocupada'},{c:2,e:'Libre'},{c:2,e:'Ocupada'},{c:6,e:'Reservada'},{c:4,e:'Libre'},{c:2,e:'Libre'},{c:2,e:'Ocupada'},{c:4,e:'Reservada'}];
+var grid=document.getElementById('mesas');
+function render(){
+  grid.innerHTML='';
+  mesas.forEach(function(m,i){
+    var info=ESTADOS[m.e],card=document.createElement('div');
+    card.className='card mesa '+info[0];
+    var num=document.createElement('div');num.className='num';num.textContent=i+1;
+    var badge=document.createElement('span');badge.className='badge '+info[1];badge.textContent=m.e;
+    var cap=document.createElement('p');cap.textContent='Capacidad: '+m.c+' personas';
+    var sel=document.createElement('select');sel.setAttribute('aria-label','Estado de la mesa '+(i+1));
+    Object.keys(ESTADOS).forEach(function(k){var o=document.createElement('option');o.value=o.textContent=k;if(k===m.e)o.selected=true;sel.appendChild(o);});
+    sel.addEventListener('change',function(){m.e=sel.value;render();});
+    card.append(num,badge,cap,sel);
+    grid.appendChild(card);
+  });
+  document.getElementById('total').textContent=mesas.length;
+  document.getElementById('remove').disabled=mesas.length===0;
+}
+document.getElementById('add').addEventListener('click',function(){mesas.push({c:4,e:'Libre'});render();});
+document.getElementById('remove').addEventListener('click',function(){mesas.pop();render();});
+render();
+})();
+</script>
 </body>
 </html>
