@@ -6,20 +6,10 @@
 <title>Inventario · Tostado</title>
 <link rel="stylesheet" href="css/styles.css">
 </head>
-<body data-title="Inventario">
-<main id="app">
-<div class="page-head"><div><h1>Inventario</h1><p>Control de insumos y existencias</p></div><button class="btn">+ Nuevo insumo</button></div>
-<div class="card">
-<div class="filters"><input type="search" placeholder="Buscar insumo..."><select><option>Todas las categorías</option><option>Café</option><option>Lácteos</option><option>Panadería</option><option>Desechables</option></select><select><option>Todos los estados</option><option>Disponible</option><option>Stock bajo</option><option>Agotado</option></select></div>
-<div class="table-wrap"><table><thead><tr><th>Código</th><th>Insumo</th><th>Categoría</th><th>Existencia</th><th>Nivel</th><th>Estado</th><th></th></tr></thead><tbody>
-<tr><td>INS-001</td><td>Café Arábica en grano</td><td>Café</td><td>2 kg</td><td><div class="bar"><span style="width:10%"></span></div></td><td><span class="badge danger">Crítico</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
-<tr><td>INS-002</td><td>Leche entera</td><td>Lácteos</td><td>8 L</td><td><div class="bar"><span style="width:30%"></span></div></td><td><span class="badge warn">Stock bajo</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
-<tr><td>INS-003</td><td>Azúcar</td><td>Abarrotes</td><td>25 kg</td><td><div class="bar"><span style="width:85%"></span></div></td><td><span class="badge ok">Disponible</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
-<tr><td>INS-004</td><td>Croissants (masa)</td><td>Panadería</td><td>40 u</td><td><div class="bar"><span style="width:60%"></span></div></td><td><span class="badge ok">Disponible</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
-<tr><td>INS-005</td><td>Vasos 12oz</td><td>Desechables</td><td>120 u</td><td><div class="bar"><span style="width:25%"></span></div></td><td><span class="badge warn">Stock bajo</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
-<tr><td>INS-006</td><td>Jarabe de vainilla</td><td>Abarrotes</td><td>0 L</td><td><div class="bar"><span style="width:0%"></span></div></td><td><span class="badge danger">Agotado</span></td><td><button class="btn secondary sm">Editar</button></td></tr>
-</tbody></table></div></div>
-</main>
+<body data-title="Inventario" data-page="inventory">
+<main id="app"></main>
+<script src="js/store.js"></script>
 <script src="js/app.js"></script>
+<script src="js/admin.js"></script>
 </body>
 </html>
