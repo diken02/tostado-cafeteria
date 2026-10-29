@@ -15,7 +15,8 @@
     return '<a href="' + l[0] + '"' + (l[0] === current ? ' class="active"' : '') + '><span>' + l[1] + '</span>' + l[2] + '</a>';
   }).join('');
   var sidebar = '<aside class="sidebar" id="sidebar"><div class="brand">☕ Tostado<small>Cafetería</small></div><nav class="nav">' +
-    '<div class="sep">Gestión</div>' + nav + '<div class="sep">Cuenta</div><a href="index.html"><span>🚪</span>Cerrar sesión</a></nav></aside>';
+    '<div class="sep">Gestión</div>' + nav + '<div class="sep">Público</div><a href="menu-cliente.html"><span>🛍️</span>Menú cliente</a>' +
+    '<div class="sep">Cuenta</div><a href="index.html"><span>🚪</span>Salir</a></nav></aside>';
   var topbar = '<header class="topbar"><div><button class="btn secondary sm menu-toggle" id="toggle" aria-label="Menú">☰</button> <strong>' + title +
     '</strong></div><div class="user"><span>Ana Torres · Administradora</span><div class="avatar">AT</div></div></header>';
   var content = document.getElementById('app');

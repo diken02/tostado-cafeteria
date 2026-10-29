@@ -3,26 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Iniciar sesión · Tostado</title>
+<title>Tostado · Cafetería</title>
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div class="login-page">
+<header class="public-nav">
+  <a class="navbar-brand" href="index.html">☕ Tostado</a>
+  <nav class="navbar-links" aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a class="navbar-cta" href="menu-cliente.html">Menú para clientes</a>
+    <a href="index.html#como-pagarlo">Cómo pagar</a>
+    <a href="index.html#contacto">Contacto</a>
+    <a href="#login">Acceso de administración</a>
+  </nav>
+</header>
+<main>
+<section class="client-hero">
+  <h1>☕ Tostado</h1>
+  <p>Café recién preparado, bebidas frías y algo rico para acompañar. Explora el menú y arma tu pedido.</p>
+  <a class="btn" href="menu-cliente.html">Ver menú y pedir</a>
+</section>
+<section id="como-pagarlo" class="pago">
+  <h2>Cómo pagar</h2>
+  <p>Selecciona efectivo, tarjeta o transferencia al confirmar tu pedido. Esta versión es una demostración y no procesa pagos.</p>
+  <div class="pago-grid">
+    <div class="card"><div class="ico">💳</div><h3>Tarjeta</h3><p>Elige tarjeta al confirmar tu pedido.</p></div>
+    <div class="card"><div class="ico">💵</div><h3>Efectivo</h3><p>Paga en caja al recoger tu pedido.</p></div>
+    <div class="card"><div class="ico">🏦</div><h3>Transferencia</h3><p>La opción queda registrada como método de pago en la demo.</p></div>
+  </div>
+</section>
+<section id="login" class="login-page">
   <section class="login-hero">
-    <h1>☕ Tostado</h1>
-    <p>Sistema de gestión para cafetería: inventario, mesas, punto de venta, reportes y equipo en un solo lugar.</p>
+    <h1>Administración</h1>
+    <p>Acceso de demostración para gestionar productos, pedidos, mesas, inventario y equipo.</p>
   </section>
   <section class="login-form">
     <form class="card" action="admin.html">
-      <h2>Bienvenido</h2>
-      <p style="color:var(--suave)">Ingresa para continuar (demo visual, sin autenticación).</p>
+      <h2>Panel de administración</h2>
+      <p style="color:var(--suave)">Acceso visual de demostración. No hay autenticación real.</p>
       <div class="form-row"><label for="u">Correo</label><input id="u" type="email" placeholder="usuario@tostado.com"></div>
       <div class="form-row"><label for="p">Contraseña</label><input id="p" type="password" placeholder="••••••••"></div>
-      <div class="form-row"><label style="font-weight:400"><input type="checkbox" style="width:auto"> Recordarme</label></div>
-      <button class="btn block" type="submit">Iniciar sesión</button>
-      <p style="text-align:center;font-size:.85rem"><a href="#">¿Olvidaste tu contraseña?</a></p>
+      <button class="btn block" type="submit">Entrar a administración</button>
     </form>
   </section>
-</div>
+</section>
+</main>
+<footer id="contacto" class="pago"><h3>Contacto</h3><p>Consulta en el local los horarios y productos disponibles.</p></footer>
 </body>
 </html>

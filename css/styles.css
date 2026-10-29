@@ -92,8 +92,31 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--dorado);border-c
   .sidebar{position:fixed;left:-260px;z-index:20;transition:left .2s;width:240px}
   .sidebar.open{left:0}
   .btn.menu-toggle{display:inline-block}
-  .grid.cols-4,.grid.cols-3,.grid.cols-2,.form-grid{grid-template-columns:1fr}
+  .grid.cols-4,.grid.cols-3,.grid.cols-2,.form-grid,.admin-split{grid-template-columns:1fr}
   .login-page{grid-template-columns:1fr}
   .login-hero{padding:2rem}
   .topbar{padding:.9rem 1rem}
 }
+
+.public-nav{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.7rem 1.5rem;background:var(--espresso);color:var(--crema)}
+.public-nav .navbar-brand{font-family:var(--font-title);font-size:1.5rem;color:var(--dorado);text-decoration:none}
+.public-nav .navbar-links{display:flex;align-items:center;gap:.3rem;flex-wrap:wrap}
+.public-nav .navbar-links a{color:var(--crema);text-decoration:none;padding:.4rem .7rem;border-radius:8px}
+.public-nav .navbar-links a:hover{background:rgba(255,255,255,.1)}
+.public-nav .navbar-links a.navbar-cta{background:var(--caramelo);color:#fff;font-weight:600}
+.public-main{max-width:1100px;margin:0 auto;padding:1.5rem}
+.menu-cat{margin-bottom:2rem}
+.product .desc{color:var(--suave);margin:.3rem 0 .8rem}
+.product-foot{display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.admin-split{grid-template-columns:2fr 1fr}
+.cart-panel,.info-panel{margin-top:1.5rem}
+.cart-totals{margin:1rem 0;text-align:right}
+.cart-totals p{margin:.25rem 0}
+.pago{padding:2rem;background:var(--crema);text-align:center}
+.pago-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;max-width:900px;margin:1.5rem auto 0}
+.pago-grid .card{padding:1.5rem}
+.pago-grid .ico{font-size:2.2rem}
+.client-hero{padding:3rem 1.5rem;background:linear-gradient(160deg,var(--espresso),var(--mocha));color:var(--crema);text-align:center}
+.client-hero h1{color:var(--dorado);font-size:3rem}
+.client-hero p{max-width:42rem;margin:.5rem auto 1.25rem}
+@media(max-width:768px){.public-nav{padding:.6rem 1rem}.public-nav .navbar-links a{padding:.3rem .45rem;font-size:.88rem}.client-hero h1{font-size:2.3rem}}
