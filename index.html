@@ -5,14 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Iniciar sesión · Tostado</title>
 <link rel="stylesheet" href="css/styles.css">
+<style>
+.home-nav{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;background:var(--espresso);padding:.8rem 2rem}
+.home-nav .brand{color:var(--dorado);font-weight:700;font-size:1.2rem;margin-right:auto}
+.home-nav a{color:var(--crema);text-decoration:none;font-weight:500}
+.home-nav a:hover{color:var(--dorado)}
+.home-nav a.btn{color:#fff}
+.home-cta{margin-top:1.5rem;font-size:1.1rem;padding:.8rem 1.8rem;background:var(--dorado);color:var(--espresso)}
+.home-cta:hover{background:var(--caramelo);color:#fff}
+.pago{padding:3rem 2rem;background:var(--leche);text-align:center}
+.pago-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:900px;margin:1.5rem auto 0}
+.pago-grid .card{padding:1.5rem}
+.pago-grid .ico{font-size:2.2rem}
+.home-page{min-height:calc(100vh - 56px)}
+</style>
 </head>
 <body>
-<div class="login-page">
+<header class="home-nav">
+  <span class="brand">☕ Tostado</span>
+  <nav class="home-nav" style="padding:0;background:none">
+    <a href="index.html">Inicio</a>
+    <a href="menu.html">Menú</a>
+    <a href="mesas.html">Mesas</a>
+    <a href="#carrito">Carrito</a>
+    <a href="#como-pagarlo">Cómo pagarlo</a>
+    <a href="#contacto">Contacto</a>
+    <a class="btn" href="#login">Iniciar sesión</a>
+  </nav>
+</header>
+<div class="login-page home-page">
   <section class="login-hero">
     <h1>☕ Tostado</h1>
     <p>Sistema de gestión para cafetería: inventario, mesas, punto de venta, reportes y equipo en un solo lugar.</p>
+    <div><a id="carrito" class="btn home-cta" href="#carrito">🛒 Ver carrito</a></div>
   </section>
-  <section class="login-form">
+  <section class="login-form" id="login">
     <form class="card" action="admin.html">
       <h2>Bienvenido</h2>
       <p style="color:var(--suave)">Ingresa para continuar (demo visual, sin autenticación).</p>
@@ -24,5 +51,18 @@
     </form>
   </section>
 </div>
+<section class="pago" id="como-pagarlo">
+  <h2>Cómo pagarlo</h2>
+  <p style="color:var(--suave)">Elige el método que prefieras (información demostrativa).</p>
+  <div class="pago-grid">
+    <div class="card"><div class="ico">💳</div><h3>Tarjeta</h3><p>Débito o crédito al momento de recibir tu pedido.</p></div>
+    <div class="card"><div class="ico">💵</div><h3>Efectivo</h3><p>Paga en caja o a quien te atienda en la mesa.</p></div>
+    <div class="card"><div class="ico">🏦</div><h3>Transferencia</h3><p>Transfiere y muestra tu comprobante.</p></div>
+  </div>
+</section>
+<footer class="pago" id="contacto" style="background:var(--crema);padding:2rem">
+  <h3>Contacto</h3>
+  <p>hola@tostado.com · Lun–Dom 7:00–20:00</p>
+</footer>
 </body>
 </html>
